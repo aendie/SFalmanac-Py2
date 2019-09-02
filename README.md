@@ -24,13 +24,15 @@ The results have been crosschecked with USNO data to some extent.
 
 ## Requirements
 
-&nbsp;&nbsp;&nbsp;&nbsp;Most of the computation is done by the free Pyephem library.  
+&nbsp;&nbsp;&nbsp;&nbsp;Most of the computation is done by the free Skyfield library.  
 &nbsp;&nbsp;&nbsp;&nbsp;Typesetting is done by LaTeX or MiKTeX so you first need to install:
 
 * Python v2.x (2.6 or later)
-* PyEphem
+* Skyfield and PyEphem (only for planet magnitudes)
 * TeX/LaTeX&nbsp;&nbsp;or&nbsp;&nbsp;MiKTeX
 
+&nbsp;&nbsp;&nbsp;&nbsp;When MiKTeX first runs it will require installation of additional packages.  
+&nbsp;&nbsp;&nbsp;&nbsp;Ignore all messages output by pdftex - SFalmanac is running correctly.  
 &nbsp;&nbsp;&nbsp;&nbsp;**DEPRECATION:** Python 2.7 will reach the end of its life on January 1st, 2020.  
 &nbsp;&nbsp;&nbsp;&nbsp;Please upgrade your Python as Python 2.7 won't be maintained after that date.  
 &nbsp;&nbsp;&nbsp;&nbsp;A future version of pip will drop support for Python 2.7.
@@ -42,12 +44,13 @@ The results have been crosschecked with USNO data to some extent.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**cd C:\\Python27\\Scripts**  
 &nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Put the Pyalmanac files in any folder, go there and start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**python.exe pyalmanac.py**
+&nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in any folder, go there and start with:  
+&nbsp;&nbsp;&nbsp;&nbsp;**python.exe SFalmanac.py**
 
 &nbsp;&nbsp;&nbsp;&nbsp;However, if Python 3 is also installed, start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**py -2 pyalmanac.py**
+&nbsp;&nbsp;&nbsp;&nbsp;**py -2 SFalmanac.py**
 
 
 ### INSTALLATION GUIDELINES on Linux:
@@ -57,11 +60,12 @@ The results have been crosschecked with USNO data to some extent.
 &nbsp;&nbsp;&nbsp;&nbsp;Run at the command line:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**
 
-&nbsp;&nbsp;&nbsp;&nbsp;Put the Pyalmanac files in any directory and start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**python pyalmanac**  
+&nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in any directory and start with:  
+&nbsp;&nbsp;&nbsp;&nbsp;**python SFalmanac**  
 &nbsp;&nbsp;&nbsp;&nbsp;or  
-&nbsp;&nbsp;&nbsp;&nbsp;**./pyalmanac**
+&nbsp;&nbsp;&nbsp;&nbsp;**./SFalmanac**
 
 
 ### INSTALLATION GUIDELINES on MAC:
@@ -73,13 +77,14 @@ The results have been crosschecked with USNO data to some extent.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**sudo easy_install pip**  
 &nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**
 
 &nbsp;&nbsp;&nbsp;&nbsp;If this command fails, your Mac asks you if you would like to install the header files.  
 &nbsp;&nbsp;&nbsp;&nbsp;Do so - you do not need to install the full IDE - and try again.
 
 &nbsp;&nbsp;&nbsp;&nbsp;Install TeX/LaTeX from http://www.tug.org/mactex/
 
-&nbsp;&nbsp;&nbsp;&nbsp;Now you are almost ready. Put the Pyalmanac files in any directory and start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**python pyalmanac**  
+&nbsp;&nbsp;&nbsp;&nbsp;Now you are almost ready. Put the SFalmanac files in any directory and start with:  
+&nbsp;&nbsp;&nbsp;&nbsp;**python SFalmanac**  
 &nbsp;&nbsp;&nbsp;&nbsp;or  
-&nbsp;&nbsp;&nbsp;&nbsp;**./pyalmanac**
+&nbsp;&nbsp;&nbsp;&nbsp;**./SFalmanac**
