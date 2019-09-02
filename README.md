@@ -5,8 +5,7 @@ SFalmanac-Py2 is a Python 2.7 script that creates the daily pages of the Nautica
 As opposed to the older PyEphem astronomy library, this uses the newer Skyfield astronomy package: https://rhodesmill.org/skyfield/
 
 NOTE: two scripts are included (both can be run): 'sfalmanac.py' and 'increments.py'  
-NOTE: a Python 3.7 script with identical functionality can be found at:  https://github.com/aendie/SFalmanac-Py3
-
+NOTE: a Python 3.7 script with identical functionality can be found at:  https://github.com/aendie/SFalmanac-Py3  
 NOTE: a [PyEphem](https://rhodesmill.org/pyephem/) version of SFalmanac is available here:
 https://github.com/aendie/Pyalmanac
 
@@ -19,7 +18,7 @@ An aim of this development was to maintain:
 	 This crude and simple method is quite effective in highlihgting data that
 	 might need further attention.
 
-The results have been crosschecked with USNO data to some extent.
+The results have been crosschecked with USNO data to some extent.  
 (However, constructive feedback is always appreciated.)
 
 
