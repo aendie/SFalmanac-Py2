@@ -60,8 +60,8 @@ The results have been crosschecked with USNO data to some extent.
 &nbsp;&nbsp;&nbsp;&nbsp;Remember to choose python 2.7 minimum and install all development header files.  
 &nbsp;&nbsp;&nbsp;&nbsp;Run at the command line:
 
-&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
-&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**  
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in any directory and start with:  
 &nbsp;&nbsp;&nbsp;&nbsp;**python SFalmanac**  
