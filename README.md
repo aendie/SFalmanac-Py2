@@ -6,6 +6,7 @@ As opposed to the older PyEphem astronomy library, this uses the newer Skyfield 
 
 NOTE: two scripts are included (both can be run): 'sfalmanac.py' and 'increments.py'  
 NOTE: a Python 3.7 script with identical functionality can be found at:  https://github.com/aendie/SFalmanac-Py3
+
 NOTE: a [PyEphem](https://rhodesmill.org/pyephem/) version of SFalmanac is available here:
 https://github.com/aendie/Pyalmanac
 
