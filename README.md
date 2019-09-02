@@ -72,8 +72,8 @@ The results have been crosschecked with USNO data to some extent.
 ### INSTALLATION GUIDELINES on MAC:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Every Mac comes with python preinstalled.  
-&nbsp;&nbsp;&nbsp;&nbsp;(Please choose the Python 3.7 version of Pyalmanac if Python 3.* is installed.)  
-&nbsp;&nbsp;&nbsp;&nbsp;You need to install the PyEphem library to use Pyalmanac.  
+&nbsp;&nbsp;&nbsp;&nbsp;(Please choose the Python 3.7 version of SFalmanac if Python 3.* is installed.)  
+&nbsp;&nbsp;&nbsp;&nbsp;You need to install the Skyfield (and PyEphem) library to use SFalmanac.  
 &nbsp;&nbsp;&nbsp;&nbsp;Type the following commands at the commandline (terminal app):
 
 &nbsp;&nbsp;&nbsp;&nbsp;**sudo easy_install pip**  
