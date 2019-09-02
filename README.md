@@ -44,14 +44,14 @@ The results have been crosschecked with USNO data to some extent.
 &nbsp;&nbsp;&nbsp;&nbsp;Using Command Prompt, go to your Python Scripts folder and run, e.g.:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**cd C:\\Python27\\Scripts**  
-&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
-&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**  
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in any folder, go there and start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**python.exe SFalmanac.py**
+&nbsp;&nbsp;&nbsp;&nbsp;**python.exe SFalmanac.py**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;However, if Python 3 is also installed, start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**py -2 SFalmanac.py**
+&nbsp;&nbsp;&nbsp;&nbsp;**py -2 SFalmanac.py**  
 
 
 ### INSTALLATION GUIDELINES on Linux:
