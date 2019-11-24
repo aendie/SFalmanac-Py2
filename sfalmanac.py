@@ -31,7 +31,7 @@ ts = init()     # in alma_skyfield
 d = datetime.datetime.utcnow().date()
 first_day = datetime.date(d.year, d.month, d.day)
 
-#first_day = datetime.date(2009, 1, 7)	# for testing a specific date
+#first_day = datetime.date(2020, 9, 30)	# for testing a specific date
 #first_day = datetime.date(2023, 6, 24)	# for testing a specific date
 #d = first_day							# for testing a specific date
 
@@ -40,7 +40,6 @@ smth = "%02d" % d.month
 syr  = "%s" % d.year
 symd = syr + smth + sday
 sdmy = sday + "." + smth + "." + syr
-#print('Today is %s' %symd)
 
 s =  raw_input("""What do you want to create?:\n
     1   Full nautical almanac   (for a year)
@@ -102,14 +101,15 @@ if s in set(['1', '2', '3', '4']):
     else:
         DecFmt = '[old]'
 
-
     if s == '1':
         print "Take a break - this computer needs some time for cosmic meditation."
-        config.init()
+##        config.init()		# initialize log file
         for yearint in range(int(yearfr),int(yearto)+1):
             start = time.time()
             year = "%4d" %yearint
-            print("\nCreating the nautical almanac for the year %s" %year)
+            msg = "\nCreating the nautical almanac for the year %s" %year
+            print(msg)
+##            config.writeLOG(msg)
             first_day = datetime.date(yearint, 1, 1)
             filename = "almanac%s%s.tex" %(ff,year+DecFmt)
             outfile = open(filename, 'w')
@@ -119,14 +119,14 @@ if s in set(['1', '2', '3', '4']):
             msg = "execution time = %0.2f seconds" %(stop-start)
             print(msg)
             print
-            config.writeLOG("\n\n" + msg)
+##            config.writeLOG("\n\n" + msg + "\n")
             command = 'pdflatex %s' %filename
             os.system(command)
             print("finished creating nautical almanac for %s" %year)
             os.remove(filename)
             os.remove("almanac%s%s.log" %(ff,year+DecFmt))
             os.remove("almanac%s%s.aux" %(ff,year+DecFmt))
-        config.closeLOG()
+##        config.closeLOG()
 
     elif s == '2':
         for yearint in range(int(yearfr),int(yearto)+1):
