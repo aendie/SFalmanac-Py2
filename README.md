@@ -2,7 +2,7 @@
 
 SFalmanac-Py2 is a Python 2.7 script that creates the daily pages of the Nautical Almanac. These are tables that are needed for celestial navigation with a sextant. Although you are strongly advised to purchase the official Nautical Almanac, this program will reproduce the tables with no warranty or guarantee of accuracy.
 
-SFalmanac-Py2 was developed with the intention of having identical output format as Pyalmanac-Py2. As opposed to the older PyEphem astronomy library, the intention was for it to be based entirely on the newer Skyfield astronomical library: https://rhodesmill.org/skyfield/, however PyEphem is still required to calculate the planet magnitudes. 
+SFalmanac-Py2 was developed with the intention of having identical output format as Pyalmanac-Py2. As opposed to the older PyEphem astronomy library, the intention was for it to be based entirely on the newer Skyfield astronomical library: https://rhodesmill.org/skyfield/, however PyEphem is still required to calculate the planet magnitudes.
 
 It uses the star database in Skyfield, which is based on data from the Hipparcos Catalogue. The principal disadvantage is that calculating twilight (actual, civil and nautical sunrise/sunset) and moonrise/moonset is **extremely** slow. As a consequence of this a new hybrid version is available that is four times faster. (The hybrid version uses PyEphem to calculate twilight and moonrise/moonset with only a minimal loss of accuracy.)
 
@@ -17,7 +17,7 @@ An aim of this development was to maintain:
 
 * **identical PDF output formatting with a similar control program**  
 	 It is then possible to display both generated tables (from PyEphem and Skyfield)
-	 and compare what has changed by flipping between the two tabs in the PDF reader.
+	 and compare what has changed by flipping between the two tabs in Adobe Acrobat Reader DC.
 	 Anything that has changed flashes, thereby drawing your attention to it.
 	 This crude and simple method is quite effective in highlihgting data that
 	 might need further attention.
