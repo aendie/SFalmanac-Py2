@@ -8,8 +8,7 @@ It uses the star database in Skyfield, which is based on data from the Hipparcos
 
 NOTE: two scripts are included (both can be run): 'sfalmanac.py' and 'increments.py'  
 NOTE: a Python 3 script with identical functionality can be found at:  https://github.com/aendie/SFalmanac-Py3  
-NOTE: a 100% [PyEphem](https://rhodesmill.org/pyephem/) version of SFalmanac is available here:  
-https://github.com/aendie/Pyalmanac-Py2  
+NOTE: a 100% [PyEphem](https://rhodesmill.org/pyephem/) version of SFalmanac is available here: https://github.com/aendie/Pyalmanac-Py2  
 NOTE: the faster hybrid version is available here: 
 https://github.com/aendie/SkyAlmanac-Py2
 
