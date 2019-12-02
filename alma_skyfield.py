@@ -486,12 +486,12 @@ def gha2deg(gst, ra):
         sha = sha + 360
     return sha
 
-def fmtdeg(deg,fixedwidth=1):
+def fmtdeg(deg, fixedwidth=1):
     # formats the angle (deg) to that used in the nautical almanac (ddd°mm.m)
 	# the optional argument specifies the minimum width for the degrees
     theminus = ""
     if deg < 0:
-    	theminus = "-"
+    	theminus = '-'
     df = abs(deg)
     di = int(df)
     mf = round((df-di)*60, 1)	# minutes (float), rounded to 1 decimal place
@@ -510,7 +510,7 @@ def fmtdeg(deg,fixedwidth=1):
             gm = "%s%s°%04.1f" %(theminus,di,mf)
     return gm
 
-#List of navigational stars with Hipparcos Catalog Number
+# List of navigational stars with Hipparcos Catalog Number
 db = """
 Alpheratz,677
 Ankaa,2081
@@ -573,7 +573,7 @@ Scheat,113881
 Markab,113963
 """
 
-def twilight(d,lat,hemisph):
+def twilight(d, lat, hemisph):
     # Returns for given date and latitude(in full degrees):
     # naut. and civil twilight (before sunrise), sunrise, meridian passage, sunset, civil and nautical twilight (after sunset).
 
@@ -738,7 +738,7 @@ def moonday(topos, degBelowHorizon):
 ##    is_moon_transit_at.rough_period = 0.01  # search increment hint
 ##    return is_moon_transit_at
 
-def moonrise_set(d,lat,hemisph):
+def moonrise_set(d, lat, hemisph):
     # returns moonrise and moonset for the given dates and latitude:
     # rise day 1, rise day 2, rise day 3, set day 1, set day 2, set day 3
 

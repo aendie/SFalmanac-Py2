@@ -109,7 +109,7 @@ def planetstab(date):
 """ %(ariestransit(date+datetime.timedelta(days=1)),RAc_v,Dc_v,mag_v,RAc_m,Dc_m,mag_m,RAc_j,Dc_j,mag_j,RAc_s,Dc_s,mag_s)
         n += 1
         date += datetime.timedelta(days=1)
-    tab = tab+r"""\end{tabular*}
+    tab = tab + r"""\end{tabular*}
 """
     return tab
 
@@ -380,10 +380,10 @@ def sunmoontab(date):
             tab = tab + r"""\multicolumn{7}{c}{}\\[-1.5ex]"""
         n += 1
         date += datetime.timedelta(days=1)
-    tab = tab+r"""\end{tabular*}"""
+    tab = tab + r"""\end{tabular*}"""
     return tab
-    
-    
+
+
 def sunmoontabm(date):
     # generates LaTeX table for sun and moon (modern style)
     tab = r'''\noindent
@@ -531,10 +531,10 @@ def declCompare(prev_deg, curr_deg, next_deg, hr):
 def NSdecl(deg, hr, printNS, printDEG, modernFMT):
     # reformat degrees latitude to Ndd°mm.m or Sdd°mm.m
     if deg[0:1] == '-':
-        hemisph = "S"
+        hemisph = 'S'
         deg = deg[1:]
     else:
-        hemisph = "N"
+        hemisph = 'N'
     if not(printDEG):
         deg = deg[4:]	# skip the degrees (always dd°mm.m) - note: the degree symbol '°' is two bytes long
         if (hr+3)%6 == 0:
@@ -553,13 +553,13 @@ def NSdecl(deg, hr, printNS, printDEG, modernFMT):
     return sdeg
 
 
-def NSdeg(deg,modern=False,hr=0,forceNS=False):
+def NSdeg(deg, modern=False, hr=0, forceNS=False):
     # reformat degrees latitude to Ndd°mm.m or Sdd°mm.m
     if deg[0:1] == '-':
-        hemisph = "S"
+        hemisph = 'S'
         deg = deg[1:]
     else:
-        hemisph = "N"
+        hemisph = 'N'
     if modern:
         if forceNS or hr%6 == 0:
             sdeg = "\\textcolor{blue}{%s}" %hemisph + deg
@@ -624,9 +624,9 @@ def twilighttab(date):
     j = 5
     for i in config.lat:
         if i >= 0:
-            hemisph = "N"
+            hemisph = 'N'
         else:
-            hemisph = "S"
+            hemisph = 'S'
         if not(i in latNS):
             hs = ""
         else:
@@ -677,9 +677,9 @@ def twilighttab(date):
     j = 5
     for i in config.lat:
         if i >= 0:
-            hemisph = "N"
+            hemisph = 'N'
         else:
-            hemisph = "S"
+            hemisph = 'S'
         if not(i in latNS):
             hs = ""
         else:
@@ -716,7 +716,7 @@ def twilighttab(date):
 # Equation of Time section ...........................................
     if config.tbls == "m":
         tab = tab + r"""\hline
-    \multicolumn{1}{|c|}{} & & & \multicolumn{1}{c|}{} & & & \multicolumn{1}{c|}{}\\[-2.0ex] 
+    \multicolumn{1}{|c|}{} & & & \multicolumn{1}{c|}{} & & & \multicolumn{1}{c|}{}\\[-2.0ex]
 
     \multicolumn{1}{|c|}{\multirow{4}{*}{\footnotesize{\textbf{Day}}}} & 
     \multicolumn{3}{c|}{\multirow{1}{*}{\footnotesize{\textbf{Sun}}}} & 
@@ -760,8 +760,7 @@ def twilighttab(date):
     return tab
 
 
-
-def double_events_found(m1,m2):
+def double_events_found(m1, m2):
     # check for two moonrise/moonset events on the same day & latitude
     dbl = False
     for i in range(len(m1)):
@@ -790,7 +789,7 @@ def doublepage(date):
     else:
         page = page + planetstab(date)
     page = page + starstab(date)
-    page = page + r"""\end{scriptsize}
+    str1 = r"""\end{scriptsize}
 
     \newpage
     \begin{flushright}
@@ -799,6 +798,7 @@ def doublepage(date):
     
     \begin{scriptsize}
 """ %(date.strftime("%Y %B %d"),(date+datetime.timedelta(days=2)).strftime("%b. %d"))
+    page = page + str1
     if config.tbls == "m":
         page = page + sunmoontabm(date)
     else:
@@ -808,9 +808,9 @@ def doublepage(date):
     \newpage
 """
     return page
-    
-    
-def pages(first_day,p):
+
+
+def pages(first_day, p):
     # make 'p' doublepages beginning with first_day
     out = ''
     pmth = ''
@@ -829,8 +829,8 @@ def pages(first_day,p):
     if p == 122:	# if Full Almanac for a year...
         print		# newline to terminate progress indicator
     return out
-    
-    
+
+
 def almanac(first_day, pagenum):
     # make almanac from date till date
     year = first_day.year
