@@ -110,6 +110,7 @@ if s in set(['1', '2', '3', '4']):
             msg = "\nCreating the nautical almanac for the year %s" %year
             print(msg)
 ##            config.writeLOG(msg)
+            print
             first_day = datetime.date(yearint, 1, 1)
             filename = "almanac%s%s.tex" %(ff,year+DecFmt)
             outfile = open(filename, 'w')
@@ -131,7 +132,9 @@ if s in set(['1', '2', '3', '4']):
     elif s == '2':
         for yearint in range(int(yearfr),int(yearto)+1):
             year = "%4d" %yearint
-            print("\nCreating the sun tables only for the year %s" %year)
+            msg = "\nCreating the sun tables only for the year %s" %(year)
+            print(msg)
+            print
             first_day = datetime.date(yearint, 1, 1)
             filename = "sunalmanac%s%s.tex" %(ff,year+DecFmt)
             outfile = open(filename, 'w')
@@ -148,7 +151,9 @@ if s in set(['1', '2', '3', '4']):
 ##        config.init()		# initialize log file
         start = time.time()
         config.stopwatch = 0.0      # 00000
-        print("\nCreating nautical almanac tables - from %s" %(sdmy))
+        msg = "\nCreating nautical almanac tables - from %s" %(sdmy)
+        print(msg)
+        print
         filename = "almanac%s%s.tex" %(ff,symd+DecFmt)
         outfile = open(filename, 'w')
         outfile.write(tables.almanac(first_day,2))
