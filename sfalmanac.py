@@ -110,7 +110,6 @@ if s in set(['1', '2', '3', '4']):
             msg = "\nCreating the nautical almanac for the year %s" %year
             print(msg)
 ##            config.writeLOG(msg)
-            print
             first_day = datetime.date(yearint, 1, 1)
             filename = "almanac%s%s.tex" %(ff,year+DecFmt)
             outfile = open(filename, 'w')
@@ -119,8 +118,8 @@ if s in set(['1', '2', '3', '4']):
             stop = time.time()
             msg = "execution time = %0.2f seconds" %(stop-start)
             print(msg)
-            print
 ##            config.writeLOG("\n\n" + msg + "\n")
+            print
             command = 'pdflatex %s' %filename
             os.system(command)
             print("finished creating nautical almanac for %s" %year)
@@ -134,7 +133,6 @@ if s in set(['1', '2', '3', '4']):
             year = "%4d" %yearint
             msg = "\nCreating the sun tables only for the year %s" %(year)
             print(msg)
-            print
             first_day = datetime.date(yearint, 1, 1)
             filename = "sunalmanac%s%s.tex" %(ff,year+DecFmt)
             outfile = open(filename, 'w')
@@ -148,12 +146,11 @@ if s in set(['1', '2', '3', '4']):
             os.remove("sunalmanac%s%s.aux" %(ff,year+DecFmt))
 
     elif s == '3':
-##        config.init()		# initialize log file
+        config.init()		# initialize log file
         start = time.time()
         config.stopwatch = 0.0      # 00000
         msg = "\nCreating nautical almanac tables - from %s" %(sdmy)
         print(msg)
-        print
         filename = "almanac%s%s.tex" %(ff,symd+DecFmt)
         outfile = open(filename, 'w')
         outfile.write(tables.almanac(first_day,2))
@@ -161,10 +158,11 @@ if s in set(['1', '2', '3', '4']):
         stop = time.time()
         msg = "execution time = %0.2f seconds" %(stop-start)
         print(msg)
-##        config.writeLOG('\n\n' + msg)
-##        config.closeLOG()
-##        msg = "stopwatch      = %0.2f seconds" %(config.stopwatch)
-##        print(msg)                  # 00000
+        config.writeLOG('\n\n' + msg)
+        config.closeLOG()
+        msg = "stopwatch      = %0.2f seconds" %(config.stopwatch)
+        print(msg)                  # 00000
+        print("(stopwatch shows the time spent in the 'almanac.find_discrete' function)")
         print
         command = 'pdflatex %s' %filename
         os.system(command)
@@ -174,7 +172,8 @@ if s in set(['1', '2', '3', '4']):
         os.remove("almanac%s%s.aux" %(ff,symd+DecFmt))
 
     elif s == '4':
-        print("\nCreating the sun tables only - from %s" %(sdmy))
+        msg = "\nCreating the sun tables only - from %s" %(sdmy)
+        print(msg)
         filename = "sunalmanac%s%s.tex" %(ff,symd+DecFmt)
         outfile = open(filename, 'w')
         outfile.write(suntables.almanac(first_day,2))
