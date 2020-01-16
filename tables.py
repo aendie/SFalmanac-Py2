@@ -928,6 +928,6 @@ def almanac(first_day, pagenum):
     \restoregeometry    % so it does not affect the rest of the pages
 """
     alm = alm + pages(first_day,pagenum)
-    alm = alm + '\end{document}'
+    alm = alm + "\end{document}"
     return alm
 

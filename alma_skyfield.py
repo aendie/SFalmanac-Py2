@@ -518,7 +518,7 @@ def planetstransit(d):      # used in starstab
     transit_time, y = almanac.find_discrete(tfr, tto, planet_transit(venus))
     #if len(y) != 1:
     #    print 'returned %s values' %len(y)
-    vtrans = rise_set(transit_time,y,'0%s E transit' %degree_sign)[0]
+    vtrans = rise_set(transit_time,y,"0%s E transit" %degree_sign)[0]
 
 # Mars
     position0 = earth.at(t0).observe(mars)
@@ -533,7 +533,7 @@ def planetstransit(d):      # used in starstab
     position = earth.at(tfr).observe(mars)
     ra = position.apparent().radec(epoch='date')[0]
     transit_time, y = almanac.find_discrete(tfr, tto, planet_transit(mars))
-    marstrans = rise_set(transit_time,y,'0%s E transit' %degree_sign)[0]
+    marstrans = rise_set(transit_time,y,"0%s E transit" %degree_sign)[0]
 
 # Jupiter
     position0 = earth.at(t0).observe(jupiter)
@@ -546,7 +546,7 @@ def planetstransit(d):      # used in starstab
     position = earth.at(tfr).observe(jupiter)
     ra = position.apparent().radec(epoch='date')[0]
     transit_time, y = almanac.find_discrete(tfr, tto, planet_transit(jupiter))
-    jtrans = rise_set(transit_time,y,'0%s E transit' %degree_sign)[0]
+    jtrans = rise_set(transit_time,y,"0%s E transit" %degree_sign)[0]
     
 # Saturn
     position0 = earth.at(t0).observe(saturn)
@@ -559,7 +559,7 @@ def planetstransit(d):      # used in starstab
     position = earth.at(tfr).observe(saturn)
     ra = position.apparent().radec(epoch='date')[0]
     transit_time, y = almanac.find_discrete(tfr, tto, planet_transit(saturn))
-    sattrans = rise_set(transit_time,y,'0%s E transit' %degree_sign)[0]
+    sattrans = rise_set(transit_time,y,"0%s E transit" %degree_sign)[0]
     
     return [vsha,vtrans,marssha,marstrans,jsha,jtrans,satsha,sattrans,hpmars,hpvenus]
 
@@ -679,8 +679,8 @@ def twilight(d, lat, hemisph):  # used in twilighttab (section 1)
     #       ...therefore daily tracking of the sun state is not possible.
 
     out = [0,0,0,0,0,0]
-    lats = '%3.1f %s' %(abs(lat), hemisph)
-    locn = Topos(lats, '0.0 E')
+    lats = "%3.1f %s" %(abs(lat), hemisph)
+    locn = Topos(lats, "0.0 E")
     dt = datetime.datetime(d.year, d.month, d.day, 0, 0, 0)
     dt -= datetime.timedelta(seconds=30)       # search from 30 seconds before midnight
     t0 = ts.utc(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
@@ -813,8 +813,8 @@ def moonrise_set(d, lat, hemisph):  # used in twilighttab (section 2)
     i = config.lat.index(lat)
     out  = ['--:--','--:--','--:--','--:--','--:--','--:--']	# first event
     out2 = ['--:--','--:--','--:--','--:--','--:--','--:--']	# second event on same day (rare)
-    lats = '%3.1f %s' %(abs(lat), hemisph)
-    locn = Topos(lats, '0.0 E')
+    lats = "%3.1f %s" %(abs(lat), hemisph)
+    locn = Topos(lats, "0.0 E")
     dt = datetime.datetime(d.year, d.month, d.day, 0, 0, 0)
     dt -= datetime.timedelta(seconds=30)       # search from 30 seconds before midnight
     t0 = ts.utc(dt.year, dt.month, dt.day, dt.hour, dt.minute, dt.second)
@@ -1104,7 +1104,7 @@ def gha2mpa(gha):
     if min == 60:
         min = 0		# this cannot happen
         hr += 1
-    hhmm = '%02d:%02d' %(hr,min)
+    hhmm = "%02d:%02d" %(hr,min)
     return hhmm
 
 def gha2eqt(gha):
@@ -1125,9 +1125,9 @@ def gha2eqt(gha):
         sec = 0
         min += 1
     if min < 59:
-        mmss = '%02d:%02d' %(min,sec)
+        mmss = "%02d:%02d" %(min,sec)
     else:
-        mmss = '??:??'		# indicate error
+        mmss = "??:??"		# indicate error
     return mmss
 
 def find_new_moon(d):       # used in doublepage
