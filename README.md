@@ -55,9 +55,6 @@ the [old](https://docs.python.org/2/library/stdtypes.html#string-formatting) sty
 * PyEphem 3.7.6 or 3.7.7 (required for planet magnitudes)
 * TeX/LaTeX&nbsp;&nbsp;or&nbsp;&nbsp;MiKTeX&nbsp;&nbsp;or&nbsp;&nbsp;TeX Live
 
-&nbsp;&nbsp;&nbsp;&nbsp;When MiKTeX first runs it will require installation of additional packages.  
-&nbsp;&nbsp;&nbsp;&nbsp;Ignore all messages output by pdftex - SFalmanac is running correctly.  
-
 &nbsp;&nbsp;&nbsp;&nbsp;**DEPRECATION:** Python 2.7 will reach the end of its life on January 1st, 2020.  
 &nbsp;&nbsp;&nbsp;&nbsp;Please upgrade your Python as Python 2.7 won't be maintained after that date.  
 &nbsp;&nbsp;&nbsp;&nbsp;A future version of pip will drop support for Python 2.7.
