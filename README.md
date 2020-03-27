@@ -53,7 +53,7 @@ the [old](https://docs.python.org/2/library/stdtypes.html#string-formatting) sty
 * Skyfield 1.17 (latest tested version)
 * Pandas (to load the Hipparcos catalog; tested: 0.24.2, 0.25.3)
 * PyEphem 3.7.6 or 3.7.7 (required for planet magnitudes)
-* TeX/LaTeX&nbsp;&nbsp;or&nbsp;&nbsp;MiKTeX
+* TeX/LaTeX&nbsp;&nbsp;or&nbsp;&nbsp;MiKTeX&nbsp;&nbsp;or&nbsp;&nbsp;TeX Live
 
 &nbsp;&nbsp;&nbsp;&nbsp;When MiKTeX first runs it will require installation of additional packages.  
 &nbsp;&nbsp;&nbsp;&nbsp;Ignore all messages output by pdftex - SFalmanac is running correctly.  
@@ -62,10 +62,12 @@ the [old](https://docs.python.org/2/library/stdtypes.html#string-formatting) sty
 &nbsp;&nbsp;&nbsp;&nbsp;Please upgrade your Python as Python 2.7 won't be maintained after that date.  
 &nbsp;&nbsp;&nbsp;&nbsp;A future version of pip will drop support for Python 2.7.
 
+
 ### INSTALLATION GUIDELINES on Windows 10:
 
 &nbsp;&nbsp;&nbsp;&nbsp;Install Python 2.7 (do not add python.exe to path) 
 &nbsp;&nbsp;&nbsp;&nbsp;Install MiKTeX 2.9 from https://miktex.org/  
+&nbsp;&nbsp;&nbsp;&nbsp;When MiKTeX first runs it will require installation of additional packages.  
 &nbsp;&nbsp;&nbsp;&nbsp;Run Command Prompt as Administrator; go to your Python folder and execute, e.g.:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**cd C:\\Python27\\Scripts**  
@@ -82,20 +84,22 @@ the [old](https://docs.python.org/2/library/stdtypes.html#string-formatting) sty
 &nbsp;&nbsp;&nbsp;&nbsp;**py -2 sfalmanac.py**  
 
 
-### INSTALLATION GUIDELINES on Linux:
+### INSTALLATION GUIDELINES on Ubuntu 18.04:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Install your platform's Python- and LaTeX distribution.  
-&nbsp;&nbsp;&nbsp;&nbsp;Remember to choose python 2.7 minimum and install all development header files.  
-&nbsp;&nbsp;&nbsp;&nbsp;Run at the command line:
+&nbsp;&nbsp;&nbsp;&nbsp;Ubuntu 18 and earlier come with Python 2 preinstalled,  
+&nbsp;&nbsp;&nbsp;&nbsp;however pip may need to be installed:  
+&nbsp;&nbsp;&nbsp;&nbsp;**sudo apt install python-pip**
 
-&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**  
+&nbsp;&nbsp;&nbsp;&nbsp;Install the following TeX Live package:  
+&nbsp;&nbsp;&nbsp;&nbsp;**sudo apt install texlive-latex-extra**
+
+&nbsp;&nbsp;&nbsp;&nbsp;Install the required astronomical libraries etc.:  
+&nbsp;&nbsp;&nbsp;&nbsp;**pip install pyephem**
 &nbsp;&nbsp;&nbsp;&nbsp;**pip install skyfield**  
 &nbsp;&nbsp;&nbsp;&nbsp;**pip install pandas**  
 
-&nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in any directory and start with:  
-&nbsp;&nbsp;&nbsp;&nbsp;**python sfalmanac**  
-&nbsp;&nbsp;&nbsp;&nbsp;or  
-&nbsp;&nbsp;&nbsp;&nbsp;**./sfalmanac**
+&nbsp;&nbsp;&nbsp;&nbsp;Put the SFalmanac files in a folder and start with:  
+&nbsp;&nbsp;&nbsp;&nbsp;**python sfalmanac.py**  
 
 
 ### INSTALLATION GUIDELINES on MAC:
