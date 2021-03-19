@@ -1,6 +1,6 @@
 # SFalmanac-Py2
 
-SFalmanac-Py2 is a Python 2.7 script that creates the daily pages of the Nautical Almanac **using the UT1 timescale**. :smiley: Official Nautical Almanacs employ a UT timescale (equivalent to UT1).
+SFalmanac-Py2 is a Python 2.7 script that creates the daily pages of the Nautical Almanac **using the UT1 timescale** :smiley:. Official Nautical Almanacs employ a UT timescale (equivalent to UT1).
 These are tables that are needed for celestial navigation with a sextant. Although you are strongly advised to purchase the official Nautical Almanac, this program will reproduce the tables with no warranty or guarantee of accuracy.
 
 SFalmanac-Py2 was developed with the intention of having identical output format as Pyalmanac-Py2. As opposed to the older PyEphem astronomy library, the intention was for it to be based entirely on the newer Skyfield astronomical library: https://rhodesmill.org/skyfield/, however PyEphem is still required to calculate the planet magnitudes.
@@ -57,7 +57,7 @@ A new option has been added into config.py: *moonimg = True* will display a grap
 
 **UPDATE: Mar 2021**
 
-&nbsp;&nbsp;&nbsp;&nbsp;***UT is the new timescale employed in the almanac.***
+&nbsp;&nbsp;&nbsp;&nbsp;:smiley:&nbsp;&nbsp;***UT is the new timescale employed in the almanac.***&nbsp;&nbsp;:smiley:
 
 Two new options have been added into config.py: *useIERS = True* instructs Skyfield (if >= 1.31) to download Earth orientation data from IERS (International Earth Rotation and Reference Systems Service). *ageIERS = 30* instructs Skyfield to download fresh data from IERS if older tham that number of days. This implies greater accuracy for the generated almanacs (if Skyfield >= 1.31).
 
