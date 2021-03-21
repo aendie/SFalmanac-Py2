@@ -1,7 +1,7 @@
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 
-#   Copyright (C) 2019  Andrew Bauer
+#   Copyright (C) 2021  Andrew Bauer
 #   Copyright (C) 2014  Enno Rodegerdts
 
 #   This program is free software; you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 #   with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # This contains one function to calculate planet magnitudes...
-# ... because these are not in Skyfield 1.11
+# ... because these are not in Skyfield yet
 
 # Third party imports
 import ephem        # required only for planet magnitudes
